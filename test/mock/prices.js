@@ -6,6 +6,9 @@ prices.method('latest', function(data, callback){
     prices: 
      { bitcoin: '594.95',
        peercoin: '1.62',
+       noirshares: '0.7',
+       noirbits: '0.002',
+       noirtokens: '2.5',
        litecoin: '9.63856',
        dogecoin: '0.000333172' },
     ctime: 1403482538541,

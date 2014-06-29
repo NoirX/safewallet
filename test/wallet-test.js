@@ -62,6 +62,20 @@ tap.test("make a mock deposit into the wallet", function (t) {
 });
 
 tap.test("make a mock deposit into the wallet", function (t) {
+  wallet.deposit({ id: id, currency:  'noirshares', amount: '1.00', address: receivingAddress }, function(err, result){
+    t.equal(null, err);
+    t.end();
+  });
+});
+
+tap.test("make a mock deposit into the wallet", function (t) {
+  wallet.deposit({ id: id, currency:  'noirbits', amount: '1.00', address: receivingAddress }, function(err, result){
+    t.equal(null, err);
+    t.end();
+  });
+});
+
+tap.test("make a mock deposit into the wallet", function (t) {
   wallet.deposit({ id: id, currency:  'dogecoin', amount: '1.00', address: receivingAddress }, function(err, result){
     t.equal(null, err);
     t.end();
@@ -69,7 +83,14 @@ tap.test("make a mock deposit into the wallet", function (t) {
 });
 
 tap.test("make a mock deposit into the wallet", function (t) {
-  wallet.deposit({ id: id, currency:  'peercoin', amount: '20000.00', address: receivingAddress }, function(err, result){
+  wallet.deposit({ id: id, currency:  'noirtokens', amount: '1.00', address: receivingAddress }, function(err, result){
+    t.equal(null, err);
+    t.end();
+  });
+});
+
+tap.test("make a mock deposit into the wallet", function (t) {
+  wallet.deposit({ id: id, currency:  'peercoin', amount: '1.00', address: receivingAddress }, function(err, result){
     t.equal(null, err);
     t.end();
   });

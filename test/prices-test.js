@@ -17,6 +17,9 @@ tap.test("attempt to fetch prices from live feeds", function (t) {
   t.type(_prices.prices.dogecoin, "string");
   t.type(_prices.prices.litecoin, "string");
   t.type(_prices.prices.peercoin, "string");
+  t.type(_prices.prices.noirshares, "string");
+  t.type(_prices.prices.noirbits, "string");
+  t.type(_prices.prices.noirtokens, "string");
   t.end();
   });
 });
@@ -31,6 +34,9 @@ tap.test("attempt to get last price from datasource", function (t) {
     t.type(latestPrice.prices.dogecoin, "string");
     t.type(latestPrice.prices.litecoin, "string");
     t.type(latestPrice.prices.peercoin, "string");
+    t.type(latestPrice.prices.noirbits, "string");
+    t.type(latestPrice.prices.noirshares, "string");
+    t.type(latestPrice.prices.noirtokens, "string");
     t.equal(err, null);
     t.end();
   });

@@ -23,11 +23,32 @@
       name: "Dollars",
       data: []
     };
-
-    var bitcoins = {
+    
+    var litecoins = {
       pointInterval: interval,
       pointStart: Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()),
-      name: "Bitcoins",
+      name: "Litecoins",
+      data: []
+    };
+    
+    var noirbits = {
+      pointInterval: interval,
+      pointStart: Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()),
+      name: "Noirbits",
+      data: []
+    };
+    
+    var noirshares = {
+      pointInterval: interval,
+      pointStart: Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()),
+      name: "NoirShares",
+      data: []
+    };
+
+    var noirtokens = {
+      pointInterval: interval,
+      pointStart: Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()),
+      name: "noirtokens",
       data: []
     };
 
@@ -49,7 +70,11 @@
       dollars.data.push(Math.round(new Number(i.dollars)));
       bitcoins.data.push(Math.round(new Number(i.bitcoin)));
       peercoins.data.push(Math.round(new Number(i.peercoin)));
+      litecoins.data.push(Math.round(new Number(i.litecoin)));
       dogecoins.data.push(Math.round(new Number(i.dogecoin)));
+      noirbits.data.push(Math.round(new Number(i.noirbits)));
+      noirshares.data.push(Math.round(new Number(i.noirshares)));
+      noirtokens.data.push(Math.round(new Number(i.noirtokens)));
     });
 
     $('#dollarsGraph').highcharts({
